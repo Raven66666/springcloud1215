@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.usersbackup.mapper.UserMapper">
+    <resultMap id="userMapper" type="com.example.usersbackup.domain.User">
+        <id property="deptNo" column="dept_no" />
+        <result property="dName" column="dName" />
+        <result property="loc" column="loc" />
+    </resultMap>
+
+    <select id="findAll" resultMap="userMapper">
+        select * from  users
+    </select>
+</mapper>
